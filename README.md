@@ -24,22 +24,26 @@ In LRU, the least-recently-used element gets evicted, whereas in FIFO, the eleme
 - Inputs to Simulator
 
 The name of your executable should be SIM, and your simulator should take inputs as following:
+
   ./SIM <CACHE_SIZE> <ASSOC> <REPLACEMENT> <WB> <TRACE_FILE>
+  
   <CACHE_SIZE> is the size of the simulated cache in bytes
+    
   <ASSOC> is the associativity
+    
   <REPLACEMENT> replacement policy: 0 means LRU, 1 means FIFO
+    
   <WB> Write-back policy: 0 means write-through, 1 means write-back
+    
   <TRACE_FILE> trace file name with full path
+    
 Example:
   ./SIM 32768 8 1 1 /home/TRACES/MCF.t
   This will simulate a 32KB write-back cache with 8-way associativity and FIFO replacement
   policy. The memory trace will be read from /home/TRACES/MCF.t
 
-Note: the trace file will contain addresses that can be for 64-bit system, so you might need data
-types that are large enough to read them correctly and bookkeep the metadata in your simulator.
-For example, if the tag is 9 bytes and you allocate your tag array bookkeeping array as an array of
-integers, you will not be able to store the whole 9 bytes; integer is only 4 bytes. Accordingly, use
-data types such as long long int and its equivalents in other languages.
+Note: the trace file will contain addresses that can be for 64-bit system, so you might need data types that are large enough to read them correctly and bookkeep the metadata in your simulator.
+For example, if the tag is 9 bytes and you allocate your tag array bookkeeping array as an array of integers, you will not be able to store the whole 9 bytes; integer is only 4 bytes. Accordingly, use data types such as long long int and its equivalents in other languages.
 
 - Output from Simulator:
 

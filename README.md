@@ -32,9 +32,9 @@ The name of your executable should be SIM, and your simulator should take inputs
   <ASSOC> is the associativity
     
   <REPLACEMENT> replacement policy: 0 means LRU, 1 means FIFO
-    
+   
   <WB> Write-back policy: 0 means write-through, 1 means write-back
-    
+   
   <TRACE_FILE> trace file name with full path
     
 Example:
